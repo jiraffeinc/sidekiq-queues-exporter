@@ -21,7 +21,6 @@ RSpec.describe Sidekiq::Queues::Exporter do
       get '/metrics'
     end
 
-
     it { is_expected.to have_attributes status: 200 }
     it { is_expected.to have_attributes body: include('sidekiq_queue {queue_name="jobs"} 2') }
     it { is_expected.to have_attributes headers: include('Cache-Control' => 'no-cache') }

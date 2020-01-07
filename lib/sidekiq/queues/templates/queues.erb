@@ -1,5 +1,4 @@
 # HELP sidekiq_queue The number of queue size
 # TYPE sidekiq_queue gauge
-<% @queues.each do |queue| %>
-sidekiq_queue <%= format('{queue_name="%<queue_name>s"} %<queue_size>d', queue) %>
+<% @queues.each do |queue| %>sidekiq_queue <%= format('{queue_name="%<queue_name>s"} %<queue_size>d', queue) %>
 <% end %>
